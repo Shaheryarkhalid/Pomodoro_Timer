@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --Green-Color:#729D39;
+
+}
+section.Main-Section{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Green-Color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Main-Section .Content-Wrapper{
+    height:60vh;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    justify-content: center;
+}
+.Main-Section .Content-Wrapper .Menu{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Raleway', sans-serif;
+}
+.Main-Section .Content-Wrapper .Menu div{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Main-Section .Content-Wrapper .Menu div button{
+    font-family: inherit;
+    font-size: clamp(0.5rem,5vw,1.5rem);
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    color: var(--Green-Color);
+    cursor: pointer;
+    margin:5px;
+}
+.Main-Section .Content-Wrapper .Menu div button:disabled{
+    cursor: not-allowed;
+}
+.Main-Section .Content-Wrapper .Menu div span{
+    padding: 5px;
+    width:50%;
+    border-bottom: 1px solid var(--Green-Color);
+}
+.Main-Section .Content-Wrapper .Timer{
+    position: relative;
+    width: 100%;
+    height:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem,8vw,3rem); 
+    font-family: 'Orbitron', sans-serif;
+    color:var(--Green-Color);
+}
+.Main-Section .Content-Wrapper .Timer div{
+    text-align: center;
+    width: 2ch;
+    user-select: none;
+}
+.Main-Section .Content-Wrapper .actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Main-Section .Content-Wrapper .actions button{
+    cursor: pointer;
+    padding:8px 10px;
+    background-color: transparent;
+    border: 1px solid var(--Green-Color);
+    border-radius: 50%;
+    margin: 0 2vw;
+}
+.Main-Section .Content-Wrapper .actions button svg{
+    max-width: 50px;
+    max-height: 50px;
+}
+.Main-Section .Content-Wrapper .actions button:disabled{
+    border-color: #000;
+    cursor: not-allowed;
+}
+
+#Down_Arrow,#UP_Arrow{
+    cursor: pointer;
+}
+#Down_Arrow{
+    top:140px;
+    left: 200px;
+}
+#UP_Arrow{
+    top:20px;
+}
+@media screen and (max-width:480px) {
+    .Main-Section .Content-Wrapper{
+        width: 95%;
+    }
+}

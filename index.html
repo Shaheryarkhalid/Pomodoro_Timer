@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promodoro Timer</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <section class="Main-Section">
+        <div class="Content-Wrapper">
+            <div class="Menu">
+                <div class="Short-Break">
+                    <button id="Short-Break-Button" onclick="Short_Break()">Short Break</button>
+                    <span style="display: block;" id="Short-Break-Span"></span>
+                </div>
+                <div class="Long-Break">
+                    <button id="Long-Break-Button" onclick="Long_Break()">Long Break</button>
+                    <span style="display: none;" id="Long-Break-Span"></span>
+                </div>
+                <div class="Custom-Break">
+                    <button id="Custom-Break-Button"  onclick="Custom_Break()" >Custom Timer</button>
+                    <span style="display: none;" id="Custom-Break-Span"></span>
+                </div>
+            </div>
+            <div class="Timer">
+                <div>
+                    <span onclick="Counter_UP()" style="display: none;" id="UP_Arrow">
+                        <svg fill="#36622B" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                                <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+                                    	l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+	                                        C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+                        </svg>
+                    </span>
+                    
+                    <div class="Minutes" id="Minutes"> 00 </div>
+                    
+                    <span  onclick="Counter_Down()" style="display: none;" id="Down_Arrow">
+                        <svg style="transform: rotate(180deg);" fill="#36622B" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                            <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+                                    l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+                                        C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
+                    </svg>
+                    </span>
+                </div>
+                <span> : </span>
+                <div class="Seconds" id="Seconds">00</div>
+                <span> : </span>
+                <div class="Milli_Seconds" id="MilliSeconds">00</div>
+            </div>
+            <div class="actions">
+                <button class="Toogle_Button" id="Toogle_Button" onclick="Start_Timer()">      
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  viewBox="0 0 24 24">
+                        <polygon points="8 5 8 19 19 12" fill="#729D39"  height="100%" width="100%"/>
+                    </svg>                      
+                </button>
+                <button id="Pause_Timer" class="Toogle_Button" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                        <rect x="7" y="5" width="4" height="14" fill="#729D39" height="100%" width="100%"/>
+                        <rect x="13" y="5" width="4" height="14" fill="#729D39" height="100%" width="100%"/>
+                    </svg>
+                </button>
+                <button id="Reset_Timer" class="Toogle_Button" onclick="Reset_Timer()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+                        <path d="M35.3 12.7c-2.89-2.9-6.88-4.7-11.3-4.7-8.84 0-15.98 7.16-15.98 16s7.14 16 15.98 16c7.45 0 13.69-5.1 15.46-12h-4.16c-1.65 4.66-6.07 8-11.3 8-6.63 0-12-5.37-12-12s5.37-12 12-12c3.31 0 6.28 1.38 8.45 3.55l-6.45 6.45h14v-14l-4.7 4.7z" fill="#729D39"  height="100%" width="100%"/>
+                        <path d="M0 0h48v48h-48z" fill="none"/>
+                    </svg>                                            
+                </button>
+        </div>
+        </div>
+    </section>
+    <script src="./index.js">
+    </script>
+</body>
+</html>
